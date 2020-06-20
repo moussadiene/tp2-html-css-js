@@ -1,0 +1,329 @@
+/*---------------------------------------------------------------------*/
+.body-index{
+
+    background-image:linear-gradient(60deg, rgba(20, 20, 20, 0.7), rgba(203, 71, 71,0.7),rgba(20, 20, 20,0.7));
+    background-repeat: no-repeat;
+    height: 450px;
+    background-attachment: fixed;
+
+}
+body{
+    margin: 0px;
+}
+.body-accueil{
+    background-image:linear-gradient(60deg, rgba(65, 54, 54, 0.7), rgba(203, 71, 71,0.7),rgba(92, 81, 81, 0.7));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+.img{
+    margin-top: -60px;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+.profil{
+    text-align: left;
+    width: 50px; height: 50px;
+    border-radius: 50px;
+}
+.partie{
+    justify-content: space-around ;
+}
+#contain{
+    margin-top: 130px;
+    justify-content: center;
+    
+}
+#contain,.partie{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.element,.el2{
+    color: black;
+    text-align: center;
+    background-color: white;
+}
+.el2{
+    width: 430px;
+}
+.element{
+    width: 510px;
+    border-radius: 10px;
+}
+.btn{
+    text-decoration: none;
+    border:solid 1px;
+    padding: 10px 25px 10px 25px;
+    font-size: 16px;
+    background-image:linear-gradient(60deg, rgba(65, 54, 54, 0.7), rgba(203, 71, 71,0.7),rgba(92, 81, 81, 0.7));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+
+.group{
+    margin: 10px 5px 20px 2px;
+}
+.group2{
+    margin: 20px 5px 30px 2px;
+}
+
+.input,select{
+    padding: 5px;
+    width: 400px;
+    border-top : none;
+    border-right : none;
+    background-color: rgba(170, 170, 170, 0.1);
+}
+
+.champs{
+    padding: 5px;
+    width: 300px;
+    border-top : none;
+    border-right : none;
+
+    background-color: rgba(170, 170, 170, 0.1);
+    font-size: 13px;
+}
+.input:focus,select:focus {
+    outline: none; /* eleve les bordures sur les input selectionnés */
+    border-top : none;
+    border-right : none;
+    background-color: rgba(128, 128, 128, 0.3);
+    border-left: solid 2px;
+    border-color: rgb(117, 116, 13);
+}
+
+
+.connecter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border : solid 1px;
+}
+.el:nth-child(1){
+    flex: 1;
+}
+.padding{
+    padding: 5px;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-justify{
+    text-align: justify;
+}
+.title{
+    padding: 0px 5px 0px 20px;
+}
+label{
+    font-weight: bold;
+    font-size: 30px;
+}
+.text{
+    font-size: 16px;
+}
+.item1{
+    margin-right: 50px;
+}
+.btn2{
+    color: #000;
+    border-radius: 20px;
+    border-color: #2ECC71;
+    padding: 10px 30px 10px 30px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.black{
+    color: black;
+}
+.red{
+    color: rgb(199, 12, 12);
+}
+.white{
+    color:white;
+}
+
+footer{
+    margin-top: 40px;
+    font-size: 60px;
+}
+
+/**/
+
+#conteneur{
+    display: flex;
+    flex-direction: row;
+}
+#left{
+    width: 250px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 3px 0px 0px 3px;
+}
+.bg-blanc{
+    background-color: #FFF;
+    color: black;
+}
+#top{
+    height: 60px;
+    background-color: white;
+    color: black;
+    border-radius: 2px 3px 3px 0px;
+    margin-left: 1px;
+}
+#right{
+    margin-top: 10px;
+}
+.form{
+    padding: 10px 10px 10px 20px;
+    background-color: #FFF;
+    color : #222;
+}
+.color{
+    width: 250px;
+    height: 5px;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+.item{
+    padding-left: 40px;
+}
+.color_select{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: rgb(121, 45, 26);
+    margin: 0px 3px 0px 3px;
+}
+
+.mon-logo{
+    width: 70px; 
+    height: 70px;
+    border-radius: 20px;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-row-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: flex-end;
+}
+.flex-row-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.flex-row-between{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.flex-row-around{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-col-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col-between{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.plus-grand{
+    flex: 1;
+}
+
+.margin{
+    margin: 5px;
+}
+.size{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: rgb(199, 12, 12) 20px;
+}
+.bg-grey{
+    background-image:linear-gradient(60deg, rgba(65, 54, 54, 0.7), rgba(203, 71, 71,0.7),rgba(92, 81, 81, 0.7));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+.par{
+    padding: 7px;
+}
+h3{
+    color : rgb(151, 7, 7);
+}
+#name-banque{
+    font-weight: bolder;
+    padding: 20px 10px 0px 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+}
+.seach{
+    border-radius: 3px;
+    margin-top: 15px;
+    background-color: #FFF;
+    font-size: 17px;
+    border-left: solid 5px;
+    border-color: #555;
+
+
+}
+.seach:focus {
+    outline: none; /* eleve les bordures sur les input selectionnés */
+    border: solid 2px;
+    background-color: #EEE;
+
+}
+.etape{
+    color: honeydew;
+    background-color: grey;
+    border-radius: 3px;
+    border-left: 30px;
+    border-right: 30px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 17px;
+    margin: 0px 15px 0px 15px;
+}
+
+.active{
+    border-bottom: solid 4px black;
+    background-image:linear-gradient(60deg, rgba(65, 54, 54, 0.7), rgba(203, 71, 71,0.7),rgba(92, 81, 81, 0.7));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+.radio{
+    margin-left: 50px;
+}
+.item1:nth-child(2){
+    flex: 1;
+}

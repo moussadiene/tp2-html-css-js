@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Simplon AUF : Imitation </title>
+</head>
+<body class="body-accueil">
+    <div class="flex-col">
+        <div id="top" class="flex-row">
+            <div class="debut margin" style="padding-right: 14px;">
+                <span><img src="img/logo-Recupere.png" alt="" class="profil" ></span>
+            </div>
+            <span id="name-banque">BANQUE DU PEUPLE</span>
+            <hr>
+            <div class="plus-grand margin">
+                <input type="text" placeholder="recherche . . . " class="seach input">
+            </div>
+            <div class="margin">
+                <img src="img/user.jpeg" alt="" class="profil">
+            </div>
+        </div>
+
+        <div id="bottom" class="flex-row">
+            <div id="left">
+                <div class="color"></div>
+                <div class="text-center bg-blanc">
+                    <div class="flex-row padding">
+                        <img src="img/user.jpeg" alt="" class="profil">
+                        <div>
+                            <p class="text-left">Moussa DIENE </p>
+                            <p>Résponsable des comptes </p>
+                        </div>
+                    </div>
+                    <div >
+                        <hr>
+                        <!--ul>
+                            <li><img src="img/compte.png" alt="" width="20px" style="margin-right: 10px;"> Gestion des Comptes </li>
+                            <ul>
+                                <li><img src="img/ajoutClient.png" alt="" width="20px" style="margin-right: 10px;">Ouverture compte</li>
+                                <li><img src="img/ajoutClient.png" alt="" width="20px" style="margin-right: 10px;">Ouverture compte</li>
+                            </ul>
+                            <li><b> Opération bancaire </b></li>
+                            <li><a href="" type="button">Se déconnecter </a></li>
+                        <ul-->
+                        <div class="">
+                            <p class="par item"> Accueil </p>
+                            <p class="par text-left "><b><img src="img/compte.png" alt="" width="20px" style="margin-right: 10px;"> Gestion des Comptes </b></p>
+                            <p class="par item color_select"><img src="img/ajoutClient.png" alt="" width="20px" style="margin-right: 10px;">Ouverture compte</p>
+                        </div>
+                        <div>
+                            <p class="par item"> Fermeture compte</p>
+
+                            <p class="par text-left"><b> Opération bancaire </b> </p>
+                        </div>
+                        <div>
+                            <hr>
+                            <p class=""> <a href="" type="button">Se déconnecter </a> </p>
+                        </div>
+                        <div class="color"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="right">
+                <form action="" class="form">
+
+                    <div class="title">
+                        <h3>Ouverture de compte client</h3>
+                        <hr>
+                    </div>
+                    <div class="corps margin">
+                        <div class="flex-row-center">
+
+                            <div class="etape active"  id="niveau1">
+                                1. Informations du Client
+                            </div>
+
+                            <div class="etape" id="niveau2">
+                                2. Information sur le compte
+                            </div>
+
+                        </div>
+                        <div id="info1">
+                            <div class="margin flex-row">
+                                <div class="item1 ">
+                                    <div class="group">
+                                        <p class="label">Prenom : * </p>
+                                        <input type="text" placeholder="Prenom . . . " name="prenom" id="prenom" class="text input">
+                                    </div>
+                                    <div class="group">
+                                        <p class="label">Nom : * </p>
+                                        <input type="text" placeholder="Nom . . . " name="nom" id="nom" class="text  input">
+                                    </div>
+                                    <div class="group">
+                                        <p class="label">Addresse : * </p>
+                                        <input type="text" placeholder="Adresse . . ." name="adr" id="adr" class="text  input">
+                                    </div>
+                                    <div class="group">
+                                        <p class="label">Sexe : * </p>
+                                        <input type="text" placeholder="Sexe . . ." name="sexe" id="sexe" class="text  input">
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="group">
+                                        <p class="label">Date de naissance : * </p>
+                                        <input type="date" placeholder="Date de naissance . . ." name="date" id="date" class="text  input">
+                                    </div>
+                                    <div class="group">
+                                        <p class="label">Numero d'identité : * </p>
+                                        <input type="text" placeholder=" Numero CIN" name="cin" id="cin" class="text  input">
+                                    </div>
+                                    <div class="group">
+                                        <p class="label">Telephone : * </p>
+                                        <input type="text" placeholder="Numéro téléphone . . . " name="tel" id="tel" class="text input">
+                                    </div>
+                                    <div class="group2">
+                                        <p class="label">Profession : (optionnel) </p>
+                                        <input type="text" placeholder="Profession . . ." name="prof" id="prof" class="text input">
+                                    </div>
+                                    <div class="group text-right ">
+                                        <p class=""><b> <a href="#" type="button" class="btn" onclick="suivant()">Suivant ⇒ </a> </b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="info2" class="margin " >
+                            <div class="flex-row">
+                                <div class="item1">
+                                    <div class="group">
+                                        <p class="label">Type de compte: * </p>
+                                        <div class="flex-row-center">
+                                            <input type="radio" class="radio" id="courant" name="compte" value="courant"  onclick="typeCompte()">
+                                            <span class="courant ">Courant</span>
+                                            <input type="radio" class="radio" id="simple" name="compte" value="xeweul" onclick="typeCompte()">
+                                            <span class="simple ">Simple et Xeweul</span>
+                                            <input type="radio" class="radio" id="bloque" name="compte" value="bloque" onclick="typeCompte()">
+                                            <span class="bloque">Bloqué</span>
+                                        </div>
+                                </div>
+                                    <div class="courant" id="contain_courant">
+                                        <div class="group">
+                                            <p class="label">courant: * </p>
+                                            <input type="date" placeholder="Date de naissance . . ." name="date" id="date" class="text  input">
+                                        </div>
+                                        <div class="group">
+                                            <p class="label">courant : * </p>
+                                            <input type="text" placeholder=" Numero CIN" name="cin" id="cin" class="text  input">
+                                        </div>
+                                    </div>
+                                    <div class="simple" id="contain_simple">
+                                        <div class="group">
+                                            <p class="label">sim : * </p>
+                                            <input type="text" placeholder="Numéro téléphone . . . " name="tel" id="tel" class="text input">
+                                        </div>
+                                        <div class="group2">
+                                            <p class="label">sim : (optionnel) </p>
+                                            <input type="text" placeholder="Profession . . ." name="prof" id="prof" class="text input">
+                                        </div>
+                                    </div>
+                                    <div class="bloque" id="contain_bloque">
+                                        <div class="group">
+                                            <p class="label">Bloque : * </p>
+                                            <input type="text" placeholder="Numéro téléphone . . . " name="tel" id="tel" class="text input">
+                                        </div>
+                                        <div class="group2">
+                                            <p class="label">bloq : (optionnel) </p>
+                                            <input type="text" placeholder="Profession . . ." name="prof" id="prof" class="text input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item2">
+                                    <div class="group">
+                                        <p class="label"> :okey * </p>
+                                        <input type="text" placeholder="Numéro téléphone . . . " name="tel" id="tel" class="text  input">
+                                    </div>
+                                    <div class="group">
+                                        <p class="label">Profession : (optionnel) </p>
+                                        <input type="text" placeholder="Profession . . ." name="prof" id="prof" class="text  input">
+                                    </div>
+                                    <div class="flex-row-right">
+                                        <p class=""><b> <a href="#" type="button" class="btn" onclick="precedent()"> ⇐ Précédent </a> </b></p>
+                                        <p class=""><b> <a href="#" type="button" class="btn ">Enregistrer </a> </b></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
