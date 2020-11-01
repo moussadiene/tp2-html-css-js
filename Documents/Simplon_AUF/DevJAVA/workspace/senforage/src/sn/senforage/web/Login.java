@@ -31,12 +31,6 @@ public class Login extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see Servlet#destroy()
-	 */
-	public void destroy(HttpServletRequest request) {
-		
-	}
 	
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -44,17 +38,21 @@ public class Login extends HttpServlet {
 	
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-			
-			request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-		
+		HttpSession session = request.getSession(true); // permet d'initier la session 
+    	session.invalidate();
+    	request.getRequestDispatcher("index.jsp").forward(request, response);
+
+    		
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		HttpSession sessio = request.getSession(true); // permet d'initier la session 
+		if(sessio!=null) {
+ 			request.getRequestDispatcher("/WEB-INF/dashboad.jsp").forward(request, response);
+    	}else {
 		try {
 			String email = request.getParameter("email");
 	    	String password = request.getParameter("password");
@@ -70,18 +68,20 @@ public class Login extends HttpServlet {
 	        	//session.invalidate(); 						// permet de supprimer le session
 	        	session.setAttribute("user", user);
 	        
-	 			request.getRequestDispatcher("/WEB-INF/villages.jsp").forward(request, response);
+	 			request.getRequestDispatcher("/WEB-INF/dashboad.jsp").forward(request, response);
 
 	    	}else {
 	    		request.setAttribute("name", "Email ou mot de passe invalide");
 	    		doGet(request, response);
 
 	    	}
+		
 		} catch (Exception e) {
 			e.printStackTrace();
 			doGet(request, response);
 			
 		}
+    	}
 		
 	}
 

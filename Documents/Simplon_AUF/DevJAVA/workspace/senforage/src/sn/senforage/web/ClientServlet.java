@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import sn.senforage.dao.ClientRepository;
 import sn.senforage.dao.JpaRepository;
@@ -44,19 +45,24 @@ public class ClientServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		JpaRepository<Client> clientRepository = new ClientRepository();
-		JpaRepository<Village> villageRepository = new VillageRepository();
-	
-		List<Client> clients = new ArrayList<Client>();
-		List<Village> villages = new ArrayList<Village>();
+		HttpSession session = request.getSession(true); // permet d'initier la session 
+		if(session==null) {
+ 			request.getRequestDispatcher("index.jsp").forward(request, response);
+    	}else {
+			JpaRepository<Client> clientRepository = new ClientRepository();
+			JpaRepository<Village> villageRepository = new VillageRepository();
 		
-		clients =  clientRepository.findAll();
-		villages =  villageRepository.findAll();
-		
-		request.setAttribute( "villages", villages);
-		request.setAttribute( "clients", clients);
-		
-		request.getServletContext().getRequestDispatcher("/WEB-INF/clients.jsp").forward(request, response);
+			List<Client> clients = new ArrayList<Client>();
+			List<Village> villages = new ArrayList<Village>();
+			
+			clients =  clientRepository.findAll();
+			villages =  villageRepository.findAll();
+			
+			request.setAttribute( "villages", villages);
+			request.setAttribute( "clients", clients);
+			
+			request.getServletContext().getRequestDispatcher("/WEB-INF/clients2.jsp").forward(request, response);
+    	}
 	}
 
 	/**
@@ -64,6 +70,10 @@ public class ClientServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		HttpSession session = request.getSession(true); // permet d'initier la session 
+		if(session==null) {
+ 			request.getRequestDispatcher("index.jsp").forward(request, response);
+    	}else {
 		try {
 			
 			JpaRepository<Client> clientRepository = new ClientRepository();
@@ -90,6 +100,7 @@ public class ClientServlet extends HttpServlet {
 		doGet(request, response);
 		// TODO Auto-generated method stub
 		// doGet(request, response);
-	}
+    	}
+		}
 
 }
